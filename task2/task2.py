@@ -23,9 +23,9 @@ def shorting(e):
 
 
 def competition(e, k):
-    while (e[k] > 0 and e[k] == e[k + 1] and k < len(e) - 1):
+    while (k < len(e) - 1 and e[k] > 0 and e[k] == e[k + 1]):
         k += 1
-    while (e[k] == 0 and k >= 0):
+    while (k >= 0 and e[k] == 0):
         k -= 1
     return k + 1
 
